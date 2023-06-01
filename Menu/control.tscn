@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://d00358vqhr4g1"]
+
+[ext_resource type="Script" path="res://Menu/scripts/Menu.gd" id="1_cqgr2"]
+
+[node name="Menu do jogo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cqgr2")
+
+[node name="jogadoresLista" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 740.0
+offset_bottom = 376.0
+
+[node name="ip" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 24.0
+offset_right = 1107.0
+offset_bottom = 123.0
+placeholder_text = "ip"
+
+[node name="nome" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 150.0
+offset_right = 1112.0
+offset_bottom = 249.0
+placeholder_text = "nome"
+
+[node name="comecar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 427.0
+offset_right = 462.0
+offset_bottom = 481.0
+text = "comecar
+"
+
+[node name="criar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 495.0
+offset_right = 610.0
+offset_bottom = 569.0
+text = "criar"
+
+[node name="entrar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 427.0
+offset_right = 665.0
+offset_bottom = 475.0
+text = "entrar"
+
+[connection signal="button_down" from="criar" to="." method="_on_criar_button_down"]
+[connection signal="button_down" from="entrar" to="." method="_on_entrar_button_down"]
