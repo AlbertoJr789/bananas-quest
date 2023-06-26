@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dquyh8lebuwu"]
+
+[ext_resource type="Script" path="res://Jogo/Jogador/Jogador.gd" id="1_whtl7"]
+[ext_resource type="Texture2D" uid="uid://bk4l06ujiws8u" path="res://assets/mamaco1.svg" id="2_1g42l"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ci6v0"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+
+[node name="Jogador" type="Node2D"]
+script = ExtResource("1_whtl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1g42l")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ci6v0")
+
+[node name="NicknameLabel" type="Label" parent="."]
+offset_left = -130.0
+offset_top = -109.0
+offset_right = 132.0
+offset_bottom = -86.0
+theme_override_font_sizes/font_size = 22
+text = "João"
+horizontal_alignment = 1
+vertical_alignment = 1

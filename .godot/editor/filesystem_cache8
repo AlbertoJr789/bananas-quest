@@ -1,0 +1,23 @@
+2a60927148abd1d33b818b535e306557
+::res://::1687774463
+export_presets.cfg::TextFile::-1::1687774081::0::1::::<><>::
+icon.svg::CompressedTexture2D::2362684403379309654::1676397073::1676397073::1::::<><>::
+::res://assets/::1687774463
+Fugi_banana2.svg::CompressedTexture2D::8867672503424985877::1687762867::1687774457::1::::<><>::
+Fugi_banana3.svg::CompressedTexture2D::4099488756128048535::1687762867::1687774457::1::::<><>::
+Fugi_banana5.svg::CompressedTexture2D::1208515179373838093::1687766290::1687774457::1::::<><>::
+Fugi_banana.svg::CompressedTexture2D::974399497903307859::1687762426::1687774457::1::::<><>::
+mamaco1.svg::CompressedTexture2D::3148890266249650830::1687764785::1687774457::1::::<><>::
+Mapa amogus.png::CompressedTexture2D::5806564753356680582::1687763250::1687774466::1::::<><>::
+::res://Jogo/::1687759581
+::res://Jogo/Fase/::1687774463
+Fase.gd::GDScript::-1::1687773774::0::1::::<>Node2D<>::
+Fase.tscn::PackedScene::453797600591798718::1687774463::0::1::::<><>::res://Jogo/Fase/Fase.gd<>uid://coy0jj0ohotry
+::res://Jogo/Jogador/::1687774456
+Jogador.gd::GDScript::-1::1687774324::0::1::::<>Node2D<>::
+Jogador.tscn::PackedScene::244854193035295288::1687774456::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://bk4l06ujiws8u
+::res://Jogo/Menu/::1687774456
+MenuLAN.gd::GDScript::-1::1687762684::0::1::::<>Control<>::
+MenuLAN.tscn::PackedScene::6135359107589848970::1687774456::0::1::::<><>::res://Jogo/Menu/MenuLAN.gd<>uid://rhocld5f8tsf
+::res://Servidor/::1687761996
+networking.gd::GDScript::-1::1687761996::0::1::::<>Node<>::

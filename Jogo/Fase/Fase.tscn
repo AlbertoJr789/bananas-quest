@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://gp28ldbjk2ek"]
+
+[ext_resource type="Script" path="res://Jogo/Fase/Fase.gd" id="1_ed3oj"]
+[ext_resource type="Texture2D" uid="uid://coy0jj0ohotry" path="res://assets/Mapa amogus.png" id="2_un808"]
+
+[node name="Fase" type="Node2D"]
+script = ExtResource("1_ed3oj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-243, 1270)
+scale = Vector2(2, 2)
+texture = ExtResource("2_un808")
+
+[node name="Jogadores" type="Node2D" parent="."]
+position = Vector2(473, 270)
