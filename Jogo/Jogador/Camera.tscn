@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bdnvc63it36au"]
+
+[node name="Camera2D" type="Camera2D"]
