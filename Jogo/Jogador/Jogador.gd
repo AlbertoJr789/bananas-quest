@@ -1,13 +1,14 @@
-extends Node2D
+extends CharacterBody2D
 
-var velocidade = 70
+var velocidade = 15
 var nickname = ""
 var camera
-var player_camera: Camera2D
+#var player_camera: Camera2D
 
 func _ready():
-	camera = get_node("Camera2D")
-
+	#camera = get_node("Camera2D")
+	pass
+	
 func _process(delta):
 	if is_multiplayer_authority():
 		var axys = Vector2.ZERO
@@ -29,8 +30,8 @@ func _process(delta):
 			$AnimatedSprite2D.play("idle")
 		position += axys * velocidade * delta * 20
 
-	if player_camera != null:
-		camera.current = player_camera
+	#if player_camera != null:
+		#camera.current = player_camera
 
 func set_nickname(nickname):
 	self.nickname = nickname

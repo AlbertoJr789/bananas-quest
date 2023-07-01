@@ -1,15 +1,16 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688151569
+::res://::1688172248
 export_presets.cfg::TextFile::-1::1688151507::0::1::::<><>::
 icon.svg::CompressedTexture2D::2362684403379309654::1688151507::1688151569::1::::<><>::
-::res://assets/::1688151611
+::res://assets/::1688157848
 Fugi_banana2.svg::CompressedTexture2D::8867672503424985877::1688151507::1688151507::1::::<><>::
 Fugi_banana3.svg::CompressedTexture2D::4099488756128048535::1688151507::1688151507::1::::<><>::
 Fugi_banana5.svg::CompressedTexture2D::1208515179373838093::1688151507::1688151507::1::::<><>::
 Fugi_banana.svg::CompressedTexture2D::974399497903307859::1688151507::1688151507::1::::<><>::
 mamaco1.svg::CompressedTexture2D::3148890266249650830::1688151507::1688151507::1::::<><>::
 Mapa amogus.png::CompressedTexture2D::5806564753356680582::1688151507::1688151507::1::::<><>::
-::res://assets/mamaco/::1688156458
+mapa flroresta.png::CompressedTexture2D::5139018218116043321::1688157840::1688157848::1::::<><>::
+::res://assets/mamaco/::1688156460
 descendo_1.png::CompressedTexture2D::4228181148302015435::1688156160::1688156460::1::::<><>::
 macaco_descendo2.png::CompressedTexture2D::2898920909552035099::1688156319::1688156460::1::::<><>::
 macaco_descendo3.png::CompressedTexture2D::2866053560482548292::1688156458::1688156460::1::::<><>::
@@ -76,15 +77,15 @@ monkey_walk_away_2@2x.png::CompressedTexture2D::5594973139014919683::1688152687:
 monkey_walk_away_3.png::CompressedTexture2D::8745152997670413505::1688152687::1688153190::1::::<><>::
 monkey_walk_away_3@2x.png::CompressedTexture2D::7071436375840510570::1688152687::1688153190::1::::<><>::
 ::res://Jogo/::1688151507
-::res://Jogo/Fase/::1688154984
+::res://Jogo/Fase/::1688158951
 Fase.gd::GDScript::-1::1688151507::0::1::::<>Node2D<>::
-Fase.tscn::PackedScene::453797600591798718::1688154984::0::1::::<><>::res://Jogo/Fase/Fase.gd<>uid://coy0jj0ohotry
-::res://Jogo/Jogador/::1688154984
+Fase.tscn::PackedScene::453797600591798718::1688158951::0::1::::<><>::res://Jogo/Fase/Fase.gd<>uid://coy0jj0ohotry<>uid://cfhm45nl6qmwn
+::res://Jogo/Jogador/::1688158950
 Camera.tscn::PackedScene::2625104425714269088::1688151507::0::1::::<><>::
-Jogador.gd::GDScript::-1::1688154984::0::1::::<>Node2D<>::
-Jogador.tscn::PackedScene::244854193035295288::1688154984::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://2t5ds47w4qui<>uid://dxh7lwblgfc6c<>uid://dngolgqn4pdnd<>uid://clqxh03vs758i<>uid://b6h2ev1xn6qgi<>uid://b7pno2ft1huef<>uid://caeumvao3u8bd<>uid://dvu5hsqhq5i5j<>uid://bi50tnm1r3ax<>uid://bp2oiiwhrpew0<>uid://wmeeajj6sbs2<>uid://joc1ixw5ufga<>uid://d0ya8tstbx0ff<>uid://c2wsg312f5i4<>uid://dwuhnlmt85piv
-::res://Jogo/Menu/::1688154984
+Jogador.gd::GDScript::-1::1688156515::0::1::::<>Node2D<>::
+Jogador.tscn::PackedScene::244854193035295288::1688158950::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://2t5ds47w4qui<>uid://dxh7lwblgfc6c<>uid://dngolgqn4pdnd<>uid://clqxh03vs758i<>uid://b6h2ev1xn6qgi<>uid://b7pno2ft1huef<>uid://caeumvao3u8bd<>uid://dvu5hsqhq5i5j<>uid://bi50tnm1r3ax<>uid://bp2oiiwhrpew0<>uid://wmeeajj6sbs2<>uid://b1ifr411c8qml<>uid://joc1ixw5ufga<>uid://d0ya8tstbx0ff<>uid://bhki2lih53rqx<>uid://c2wsg312f5i4<>uid://dwuhnlmt85piv<>uid://bg3lqo21fbfvo
+::res://Jogo/Menu/::1688158076
 MenuLAN.gd::GDScript::-1::1688151507::0::1::::<>Control<>::
-MenuLAN.tscn::PackedScene::6135359107589848970::1688154984::0::1::::<><>::res://Jogo/Menu/MenuLAN.gd<>uid://rhocld5f8tsf
+MenuLAN.tscn::PackedScene::6135359107589848970::1688158076::0::1::::<><>::res://Jogo/Menu/MenuLAN.gd<>uid://rhocld5f8tsf
 ::res://Servidor/::1688151507
 networking.gd::GDScript::-1::1688151507::0::1::::<>Node<>::

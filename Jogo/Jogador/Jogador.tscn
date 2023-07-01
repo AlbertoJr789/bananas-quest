@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dquyh8lebuwu"]
+[gd_scene load_steps=23 format=3 uid="uid://dquyh8lebuwu"]
 
 [ext_resource type="Script" path="res://Jogo/Jogador/Jogador.gd" id="1_whtl7"]
 [ext_resource type="Texture2D" uid="uid://2t5ds47w4qui" path="res://assets/mamaco/monkey_run_1.png" id="2_sfaif"]
@@ -20,7 +20,17 @@
 [ext_resource type="Texture2D" uid="uid://dwuhnlmt85piv" path="res://assets/mamaco/monkey_walk_away_3.png" id="15_rr0um"]
 [ext_resource type="Texture2D" uid="uid://bg3lqo21fbfvo" path="res://assets/mamaco/macaco_descendo3.png" id="15_tvpet"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ylobw"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4juw2"]
+custom_solver_bias = 0.088
+radius = 14.0
+height = 52.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dnims"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cs8vu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -102,30 +112,28 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ci6v0"]
-properties/0/path = NodePath(".:position")
-properties/0/spawn = true
-properties/0/sync = true
-
-[node name="Jogador" type="Node2D"]
+[node name="Jogador" type="CharacterBody2D"]
 script = ExtResource("1_whtl7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ylobw")
-animation = &"descer"
-frame_progress = 0.935832
-
-[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_ci6v0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4juw2")
 
 [node name="NicknameLabel" type="Label" parent="."]
-offset_left = -130.0
-offset_top = -109.0
-offset_right = 132.0
-offset_bottom = -86.0
+offset_left = -133.0
+offset_top = -52.0
+offset_right = 129.0
+offset_bottom = -18.0
 theme_override_font_sizes/font_size = 22
 text = "João"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+root_path = NodePath("../..")
+replication_config = SubResource("SceneReplicationConfig_dnims")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, 1.90735e-06)
+scale = Vector2(0.321429, 0.321429)
+sprite_frames = SubResource("SpriteFrames_cs8vu")
+animation = &"descer"

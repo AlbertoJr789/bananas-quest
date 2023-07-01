@@ -6,6 +6,7 @@ func _ready():
 	var lista_jogadores = Networking.retornar_lista()
 	for i in range(lista_jogadores.size()):
 		var obj = packed_jogador.instantiate()
+		print(obj)
 		$Jogadores.add_child(obj)
 		obj.position = Vector2(512, 300)
 		obj.name = str(lista_jogadores[i][0])
