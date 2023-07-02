@@ -12,13 +12,21 @@ func _process(delta):
 	if is_multiplayer_authority():
 		var axys = Vector2.ZERO
 		if Input.is_action_pressed("b_direita"):
+			$AnimatedSprite2D.play("andar")
+			$AnimatedSprite2D.flip_h = false
 			axys += Vector2(1, 0)
-		if Input.is_action_pressed("b_esquerda"):
+		elif Input.is_action_pressed("b_esquerda"):
+			$AnimatedSprite2D.play("andar")
+			$AnimatedSprite2D.flip_h = true			
 			axys += Vector2(-1, 0)
-		if Input.is_action_pressed("b_cima"):
+		elif Input.is_action_pressed("b_cima"):
+			$AnimatedSprite2D.play("subir")
 			axys += Vector2(0, -1)
-		if Input.is_action_pressed("b_baixo"):
+		elif Input.is_action_pressed("b_baixo"):
+			$AnimatedSprite2D.play("descer")
 			axys += Vector2(0, 1)
+		else:
+			$AnimatedSprite2D.play("idle")
 		position += axys * velocidade * delta * 20
 
 	if player_camera != null:
