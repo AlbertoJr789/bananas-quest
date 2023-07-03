@@ -1,8 +1,9 @@
 CollisionShape2D
+Sprite2D
+Area2D
 MultiplayerSpawner
 StaticBody2D
 RigidBody2D
-Sprite2D
 Control
 CharacterBody2D
 ColorRect
@@ -10,7 +11,6 @@ AnimatedSprite2D
 Camera2D
 Node2D
 MultiplayerSynchronizer
-Area2D
 Label
 BoxContainer
 Container

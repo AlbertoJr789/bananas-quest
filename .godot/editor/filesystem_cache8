@@ -1,12 +1,11 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688356396
+::res://::1688358310
 export_presets.cfg::TextFile::-1::1688342312::0::1::::<><>::
-icon.svg::CompressedTexture2D::2362684403379309654::1688342312::1688342486::1::::<><>::
-::res://assets/::1688342486
+icon.svg::CompressedTexture2D::974399497903307859::1688342312::1688357470::1::::<><>::
+::res://assets/::1688357457
 Fugi_banana2.svg::CompressedTexture2D::8867672503424985877::1688342312::1688342486::1::::<><>::
 Fugi_banana3.svg::CompressedTexture2D::4099488756128048535::1688342312::1688342486::1::::<><>::
 Fugi_banana5.svg::CompressedTexture2D::1208515179373838093::1688342312::1688342486::1::::<><>::
-Fugi_banana.svg::CompressedTexture2D::974399497903307859::1688342312::1688342486::1::::<><>::
 mamaco1.svg::CompressedTexture2D::3148890266249650830::1688342312::1688342486::1::::<><>::
 Mapa amogus.png::CompressedTexture2D::5806564753356680582::1688342312::1688342312::1::::<><>::
 mapa flroresta.png::CompressedTexture2D::4315685744203618741::1688342312::1688342312::1::::<><>::
@@ -79,18 +78,18 @@ monkey_walk_away_3@2x.png::CompressedTexture2D::7071436375840510570::1688342312:
 ::res://Jogo/::1688344874
 dasd.gd::GDScript::-1::1688342312::0::1::::<>CharacterBody2D<>::
 dasd.tscn::PackedScene::244854193035295288::1688342312::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://2t5ds47w4qui<>uid://dxh7lwblgfc6c<>uid://dngolgqn4pdnd<>uid://clqxh03vs758i<>uid://b6h2ev1xn6qgi<>uid://b7pno2ft1huef<>uid://caeumvao3u8bd<>uid://dvu5hsqhq5i5j<>uid://bi50tnm1r3ax<>uid://bp2oiiwhrpew0<>uid://wmeeajj6sbs2<>uid://b1ifr411c8qml<>uid://joc1ixw5ufga<>uid://d0ya8tstbx0ff<>uid://bhki2lih53rqx<>uid://c2wsg312f5i4<>uid://dwuhnlmt85piv<>uid://bg3lqo21fbfvo
-::res://Jogo/Fase/::1688356321
-Fase.gd::GDScript::-1::1688350545::0::1::::<>Node2D<>::
-Fase.tscn::PackedScene::453797600591798718::1688356321::0::1::::<><>::res://Jogo/Fase/Fase.gd<>uid://coy0jj0ohotry<>uid://b2qsyjam41sgb
-::res://Jogo/Jogador/::1688356321
+::res://Jogo/Fase/::1688358264
+Fase.gd::GDScript::-1::1688358264::0::1::::<>Node2D<>::
+Fase.tscn::PackedScene::453797600591798718::1688358264::0::1::::<><>::res://Jogo/Fase/Fase.gd<>uid://coy0jj0ohotry<>uid://b2qsyjam41sgb<>uid://n5ahnjp6ait4
+::res://Jogo/Jogador/::1688358223
 Camera.tscn::PackedScene::2625104425714269088::1688342312::0::1::::<><>::
-Jogador.gd::GDScript::-1::1688356302::0::1::::<>CharacterBody2D<>::
-Jogador.tscn::PackedScene::244854193035295288::1688356321::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://2t5ds47w4qui<>uid://dxh7lwblgfc6c<>uid://dngolgqn4pdnd<>uid://clqxh03vs758i<>uid://b6h2ev1xn6qgi<>uid://b7pno2ft1huef<>uid://caeumvao3u8bd<>uid://dvu5hsqhq5i5j<>uid://bi50tnm1r3ax<>uid://bp2oiiwhrpew0<>uid://wmeeajj6sbs2<>uid://b1ifr411c8qml<>uid://bhki2lih53rqx<>uid://bg3lqo21fbfvo<>uid://joc1ixw5ufga<>uid://d0ya8tstbx0ff<>uid://c2wsg312f5i4<>uid://dwuhnlmt85piv
-::res://Jogo/Menu/::1688356355
+Jogador.gd::GDScript::-1::1688357336::0::1::::<>CharacterBody2D<>::
+Jogador.tscn::PackedScene::244854193035295288::1688358223::0::1::::<><>::res://Jogo/Jogador/Jogador.gd<>uid://2t5ds47w4qui<>uid://dxh7lwblgfc6c<>uid://dngolgqn4pdnd<>uid://clqxh03vs758i<>uid://b6h2ev1xn6qgi<>uid://b7pno2ft1huef<>uid://caeumvao3u8bd<>uid://dvu5hsqhq5i5j<>uid://bi50tnm1r3ax<>uid://bp2oiiwhrpew0<>uid://wmeeajj6sbs2<>uid://b1ifr411c8qml<>uid://bhki2lih53rqx<>uid://bg3lqo21fbfvo<>uid://joc1ixw5ufga<>uid://d0ya8tstbx0ff<>uid://c2wsg312f5i4<>uid://dwuhnlmt85piv
+::res://Jogo/Menu/::1688358223
 MenuLAN.gd::GDScript::-1::1688342312::0::1::::<>Control<>::
-MenuLAN.tscn::PackedScene::6135359107589848970::1688356355::0::1::::<><>::res://Jogo/Menu/MenuLAN.gd<>uid://rhocld5f8tsf
-::res://Jogo/Teste/::1688349481
-Player.tscn::PackedScene::404895815012052825::1688349480::0::1::::<><>::uid://8wrcjmwq8u67
+MenuLAN.tscn::PackedScene::6135359107589848970::1688358223::0::1::::<><>::res://Jogo/Menu/MenuLAN.gd<>uid://rhocld5f8tsf
+::res://Jogo/Teste/::1688357465
+Player.tscn::PackedScene::404895815012052825::1688357465::0::1::::<><>::uid://8wrcjmwq8u67
 Teste1.tscn::PackedScene::893965871974881001::1688349480::0::1::::<><>::uid://ctoap6e1xmr6y
 ::res://Servidor/::1688342312
 networking.gd::GDScript::-1::1688342312::0::1::::<>Node<>::

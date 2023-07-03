@@ -1,38 +1,38 @@
 extends CharacterBody2D
 
-const velocidade = 300
+var velocidade = 15
 var nickname = ""
 var camera
+#var player_camera: Camera2D
 
-func _physics_process(delta):
-	var input_vector = Vector2.ZERO
+func _ready():
+	#camera = get_node("Camera2D")
+	pass
+	
+func _process(delta):
 	if is_multiplayer_authority():
+		var axys = Vector2.ZERO
 		if Input.is_action_pressed("b_direita"):
 			$AnimatedSprite2D.play("andar")
 			$AnimatedSprite2D.flip_h = false
-			input_vector.x += 1
+			axys += Vector2(1, 0)
 		elif Input.is_action_pressed("b_esquerda"):
 			$AnimatedSprite2D.play("andar")
-			$AnimatedSprite2D.flip_h = true
-			input_vector.x -= 1
+			$AnimatedSprite2D.flip_h = true			
+			axys += Vector2(-1, 0)
 		elif Input.is_action_pressed("b_cima"):
 			$AnimatedSprite2D.play("subir")
-			input_vector.y -= 1
+			axys += Vector2(0, -1)
 		elif Input.is_action_pressed("b_baixo"):
 			$AnimatedSprite2D.play("descer")
-			input_vector.y += 1
-			
-		if input_vector != Vector2.ZERO:
-			input_vector = input_vector.normalized()
-			velocity = input_vector * velocidade
+			axys += Vector2(0, 1)
 		else:
-			velocity = Vector2.ZERO
 			$AnimatedSprite2D.play("idle")
-			
-		var collision = move_and_collide(velocity * delta)
-		if collision:
-			velocity = Vector2.ZERO
-			
+		position += axys * velocidade * delta * 20
+
+	#if player_camera != null:
+		#camera.current = player_camera
+
 func set_nickname(nickname):
 	self.nickname = nickname
 	$NicknameLabel.text = nickname

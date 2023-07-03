@@ -1,0 +1,148 @@
+[gd_scene load_steps=23 format=3 uid="uid://dquyh8lebuwu"]
+
+[ext_resource type="Script" path="res://Jogo/Jogador/Jogador.gd" id="1_whtl7"]
+[ext_resource type="Texture2D" uid="uid://2t5ds47w4qui" path="res://assets/mamaco/monkey_run_1.png" id="2_sfaif"]
+[ext_resource type="Texture2D" uid="uid://dxh7lwblgfc6c" path="res://assets/mamaco/monkey_run_2.png" id="3_h0gyl"]
+[ext_resource type="Texture2D" uid="uid://dngolgqn4pdnd" path="res://assets/mamaco/monkey_run_3.png" id="4_1o571"]
+[ext_resource type="Texture2D" uid="uid://clqxh03vs758i" path="res://assets/mamaco/monkey_run_4.png" id="5_a1u1e"]
+[ext_resource type="Texture2D" uid="uid://b6h2ev1xn6qgi" path="res://assets/mamaco/monkey_run_5.png" id="6_mun7g"]
+[ext_resource type="Texture2D" uid="uid://b7pno2ft1huef" path="res://assets/mamaco/monkey_run_6.png" id="7_2o5kb"]
+[ext_resource type="Texture2D" uid="uid://caeumvao3u8bd" path="res://assets/mamaco/monkey_run_7.png" id="8_hh8xf"]
+[ext_resource type="Texture2D" uid="uid://dvu5hsqhq5i5j" path="res://assets/mamaco/monkey_run_8.png" id="9_4h3kv"]
+[ext_resource type="Texture2D" uid="uid://bi50tnm1r3ax" path="res://assets/mamaco/monkey_armsup.png" id="10_8rusm"]
+[ext_resource type="Texture2D" uid="uid://bp2oiiwhrpew0" path="res://assets/mamaco/monkey_armsup_happy.png" id="11_whv8x"]
+[ext_resource type="Texture2D" uid="uid://wmeeajj6sbs2" path="res://assets/mamaco/monkey_dead.png" id="12_qws03"]
+[ext_resource type="Texture2D" uid="uid://b1ifr411c8qml" path="res://assets/mamaco/descendo_1.png" id="13_2arji"]
+[ext_resource type="Texture2D" uid="uid://joc1ixw5ufga" path="res://assets/mamaco/monkey_idle.png" id="13_p4cpo"]
+[ext_resource type="Texture2D" uid="uid://d0ya8tstbx0ff" path="res://assets/mamaco/monkey_walk_away_1.png" id="13_sgwwr"]
+[ext_resource type="Texture2D" uid="uid://bhki2lih53rqx" path="res://assets/mamaco/macaco_descendo2.png" id="14_nsv31"]
+[ext_resource type="Texture2D" uid="uid://c2wsg312f5i4" path="res://assets/mamaco/monkey_walk_away_2.png" id="14_wf07l"]
+[ext_resource type="Texture2D" uid="uid://dwuhnlmt85piv" path="res://assets/mamaco/monkey_walk_away_3.png" id="15_rr0um"]
+[ext_resource type="Texture2D" uid="uid://bg3lqo21fbfvo" path="res://assets/mamaco/macaco_descendo3.png" id="15_tvpet"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dnims"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cs8vu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sfaif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h0gyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1o571")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a1u1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mun7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2o5kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hh8xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4h3kv")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8rusm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_whv8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qws03")
+}],
+"loop": true,
+"name": &"coringou",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_2arji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nsv31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tvpet")
+}],
+"loop": true,
+"name": &"descer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_p4cpo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sgwwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wf07l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rr0um")
+}],
+"loop": true,
+"name": &"subir",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4juw2"]
+custom_solver_bias = 0.088
+radius = 14.0
+height = 52.0
+
+[node name="Jogador" type="CharacterBody2D"]
+script = ExtResource("1_whtl7")
+metadata/_edit_vertical_guides_ = [23.0, 0.0, 1152.0]
+metadata/_edit_horizontal_guides_ = [0.0, 650.0]
+
+[node name="NicknameLabel" type="Label" parent="."]
+offset_left = -133.0
+offset_top = -52.0
+offset_right = 129.0
+offset_bottom = -18.0
+theme_override_font_sizes/font_size = 22
+text = "João"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+root_path = NodePath("../..")
+replication_config = SubResource("SceneReplicationConfig_dnims")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, 1.90735e-06)
+scale = Vector2(0.321429, 0.321429)
+sprite_frames = SubResource("SpriteFrames_cs8vu")
+animation = &"descer"
+frame_progress = 0.233544
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4juw2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 650
