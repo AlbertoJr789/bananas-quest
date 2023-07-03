@@ -1,13 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://gp28ldbjk2ek"]
+[gd_scene load_steps=9 format=3 uid="uid://gp28ldbjk2ek"]
 
 [ext_resource type="Script" path="res://Jogo/Fase/Fase.gd" id="1_ed3oj"]
 [ext_resource type="Texture2D" uid="uid://coy0jj0ohotry" path="res://assets/Mapa amogus.png" id="2_un808"]
 [ext_resource type="Texture2D" uid="uid://b2qsyjam41sgb" path="res://assets/mapa flroresta.png" id="3_pjksj"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mvj8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0oq4e"]
+size = Vector2(1615, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_822ft"]
+size = Vector2(15, 910)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3u33"]
+size = Vector2(1605, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lh7xg"]
+size = Vector2(23, 930)
+
 [node name="Fase" type="Node2D"]
 script = ExtResource("1_ed3oj")
 metadata/_edit_vertical_guides_ = [-64.0, 0.0, 1605.0, 1605.0]
 metadata/_edit_horizontal_guides_ = [0.0, 900.0, 900.0]
+
+[node name="MapaFlroresta" type="Sprite2D" parent="."]
+position = Vector2(802, 451)
+scale = Vector2(2.50938, 1.794)
+texture = ExtResource("3_pjksj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -15,10 +34,29 @@ position = Vector2(-243, 1270)
 scale = Vector2(2, 2)
 texture = ExtResource("2_un808")
 
-[node name="MapaFlroresta" type="Sprite2D" parent="."]
-position = Vector2(802, 451)
-scale = Vector2(2.50938, 1.794)
-texture = ExtResource("3_pjksj")
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 255
+physics_material_override = SubResource("PhysicsMaterial_mvj8a")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(803, 0)
+shape = SubResource("RectangleShape2D_0oq4e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 451)
+shape = SubResource("RectangleShape2D_822ft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(802.5, 911)
+shape = SubResource("RectangleShape2D_l3u33")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1615.5, 451)
+shape = SubResource("RectangleShape2D_lh7xg")
 
 [node name="Jogadores" type="Node2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(473, 270)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../Jogadores")

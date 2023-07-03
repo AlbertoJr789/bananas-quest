@@ -1,37 +1,35 @@
-extends Node2D
+extends CharacterBody2D
 
-var velocidade = 70
+const velocidade = 300
 var nickname = ""
 var camera
-var player_camera: Camera2D
 
-func _ready():
-	camera = get_node("Camera2D")
-
-func _process(delta):
+func _physics_process(delta):
+	var input_vector = Vector2.ZERO
 	if is_multiplayer_authority():
-		var axys = Vector2.ZERO
 		if Input.is_action_pressed("b_direita"):
 			$AnimatedSprite2D.play("andar")
 			$AnimatedSprite2D.flip_h = false
-			axys += Vector2(1, 0)
+			input_vector.x += 1
 		elif Input.is_action_pressed("b_esquerda"):
 			$AnimatedSprite2D.play("andar")
-			$AnimatedSprite2D.flip_h = true			
-			axys += Vector2(-1, 0)
+			$AnimatedSprite2D.flip_h = true
+			input_vector.x -= 1
 		elif Input.is_action_pressed("b_cima"):
 			$AnimatedSprite2D.play("subir")
-			axys += Vector2(0, -1)
+			input_vector.y -= 1
 		elif Input.is_action_pressed("b_baixo"):
 			$AnimatedSprite2D.play("descer")
-			axys += Vector2(0, 1)
+			input_vector.y += 1
+		input_vector = input_vector.normalized()
+		
+		if input_vector:
+			velocity = input_vector * velocidade
 		else:
+			velocity = input_vector
 			$AnimatedSprite2D.play("idle")
-		position += axys * velocidade * delta * 20
-
-	if player_camera != null:
-		camera.current = player_camera
-
+		move_and_slide()
+	
 func set_nickname(nickname):
 	self.nickname = nickname
 	$NicknameLabel.text = nickname
