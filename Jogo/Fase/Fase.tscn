@@ -1,47 +1,400 @@
-[gd_scene load_steps=7 format=3 uid="uid://gp28ldbjk2ek"]
+[gd_scene load_steps=40 format=3 uid="uid://gp28ldbjk2ek"]
 
 [ext_resource type="Script" path="res://Jogo/Fase/Fase.gd" id="1_ed3oj"]
-[ext_resource type="Texture2D" uid="uid://cfhm45nl6qmwn" path="res://assets/mapa flroresta.png" id="3_jmba4"]
+[ext_resource type="Texture2D" uid="uid://coy0jj0ohotry" path="res://assets/Mapa amogus.png" id="2_un808"]
+[ext_resource type="Texture2D" uid="uid://b2qsyjam41sgb" path="res://assets/mapa flroresta.png" id="3_pjksj"]
+[ext_resource type="Texture2D" uid="uid://n5ahnjp6ait4" path="res://icon.svg" id="4_ms2mb"]
+[ext_resource type="PackedScene" uid="uid://dquyh8lebuwu" path="res://Jogo/Jogador/Jogador.tscn" id="5_pepac"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4u1nh"]
-size = Vector2(10, 656)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mvj8a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k23t8"]
-size = Vector2(1161, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0oq4e"]
+size = Vector2(1615, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qyk7"]
-size = Vector2(11, 664)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_822ft"]
+size = Vector2(15, 910)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjbs2"]
-size = Vector2(1168, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3u33"]
+size = Vector2(1605, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lh7xg"]
+size = Vector2(23, 930)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ec24"]
+radius = 58.0001
+height = 186.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ifx"]
+size = Vector2(46.5, 81.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kt16"]
+size = Vector2(74.5, 65.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uqth"]
+size = Vector2(75, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f74jt"]
+size = Vector2(50.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s538n"]
+size = Vector2(55, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v64bd"]
+size = Vector2(72, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7c6h"]
+size = Vector2(36, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ubt"]
+size = Vector2(50, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iflx8"]
+size = Vector2(34, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3tmv"]
+size = Vector2(37, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln0ce"]
+size = Vector2(48, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qeymy"]
+size = Vector2(62.25, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d30er"]
+size = Vector2(33.5, 27.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3yqq"]
+size = Vector2(52.25, 94.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s63vv"]
+size = Vector2(37.5, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ysu1"]
+size = Vector2(47.5, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8q57"]
+size = Vector2(43, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apg6f"]
+size = Vector2(63.5, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ukc"]
+size = Vector2(53.5, 38.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l125"]
+size = Vector2(158, 228.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my5h6"]
+size = Vector2(49, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evabk"]
+size = Vector2(50.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jh86p"]
+size = Vector2(57, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xsh2"]
+size = Vector2(63, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxf26"]
+size = Vector2(72, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1d2m"]
+size = Vector2(58, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ss70"]
+size = Vector2(132.5, 122)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxe0q"]
+radius = 66.0
+height = 214.0
 
 [node name="Fase" type="Node2D"]
 script = ExtResource("1_ed3oj")
+metadata/_edit_vertical_guides_ = [-64.0, 0.0, 1605.0, 1605.0]
+metadata/_edit_horizontal_guides_ = [0.0, 900.0, 900.0]
 
-[node name="MapaFloresta" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(576.5, 324.5)
-scale = Vector2(1.80469, 1.29)
-texture = ExtResource("3_jmba4")
+[node name="MapaFlroresta" type="Sprite2D" parent="."]
+position = Vector2(804, 451)
+scale = Vector2(2.50938, 1.794)
+texture = ExtResource("3_pjksj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-243, 1270)
+scale = Vector2(2, 2)
+texture = ExtResource("2_un808")
+
+[node name="limites_mapa" type="StaticBody2D" parent="."]
+position = Vector2(1, 0)
+collision_layer = 255
+physics_material_override = SubResource("PhysicsMaterial_mvj8a")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(803, 0)
+shape = SubResource("RectangleShape2D_0oq4e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(-1, 451)
+shape = SubResource("RectangleShape2D_822ft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(802.5, 912.5)
+shape = SubResource("RectangleShape2D_l3u33")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(1615.5, 451)
+shape = SubResource("RectangleShape2D_lh7xg")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(95, 858)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_1ec24")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(551.5, 817.5)
+shape = SubResource("RectangleShape2D_w2ifx")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(205.75, 561)
+shape = SubResource("RectangleShape2D_w2ifx")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(359.75, 516.25)
+shape = SubResource("RectangleShape2D_0kt16")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(279, 550)
+shape = SubResource("RectangleShape2D_1uqth")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(120.75, 534)
+shape = SubResource("RectangleShape2D_f74jt")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(34.5, 387)
+shape = SubResource("RectangleShape2D_s538n")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(280, 338.25)
+shape = SubResource("RectangleShape2D_v64bd")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(164, 272)
+shape = SubResource("RectangleShape2D_a7c6h")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(157, 295.5)
+shape = SubResource("RectangleShape2D_p5ubt")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(16, 234)
+shape = SubResource("RectangleShape2D_iflx8")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(119.5, 92)
+shape = SubResource("RectangleShape2D_r3tmv")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(249, 68)
+shape = SubResource("RectangleShape2D_ln0ce")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(369.125, 155.5)
+shape = SubResource("RectangleShape2D_qeymy")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(433.25, 282.25)
+shape = SubResource("RectangleShape2D_d30er")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(523.125, 263.75)
+shape = SubResource("RectangleShape2D_l3yqq")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(633.25, 234.5)
+shape = SubResource("RectangleShape2D_s63vv")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(594.25, 93.5)
+shape = SubResource("RectangleShape2D_3ysu1")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(716, 188)
+shape = SubResource("RectangleShape2D_a8q57")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(598.25, 425)
+shape = SubResource("RectangleShape2D_apg6f")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(839.25, 269.75)
+shape = SubResource("RectangleShape2D_r6ukc")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(1079, 114.125)
+shape = SubResource("RectangleShape2D_2l125")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(916, 156)
+shape = SubResource("RectangleShape2D_my5h6")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(839, 102)
+shape = SubResource("RectangleShape2D_evabk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="limites_mapa"]
+position = Vector2(1026, 576)
+polygon = PackedVector2Array(-8, -74, -61, 78, 91, 75, 58, -8, 98, -78)
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(835.5, 701)
+shape = SubResource("RectangleShape2D_jh86p")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(1241.5, 705.75)
+shape = SubResource("RectangleShape2D_7xsh2")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="limites_mapa"]
+position = Vector2(1227, 218)
+polygon = PackedVector2Array(12, -19, 40, -11, 50, 5, 41, 32, 40, 70, -16, 61, 5, 10)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="limites_mapa"]
+position = Vector2(1259, 52)
+polygon = PackedVector2Array(106, 59, 130, 62, 134, 101, 97, 107)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limites_mapa"]
+position = Vector2(1328, 296)
+polygon = PackedVector2Array(53, 0, 34, 35, 56, 52, 76, 50, 102, 47, 110, 35, 88, 1)
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(1568, 97)
+shape = SubResource("RectangleShape2D_bxf26")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="limites_mapa"]
+position = Vector2(1575, 273.5)
+shape = SubResource("RectangleShape2D_n1d2m")
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="limites_mapa"]
+position = Vector2(1191, 35)
+polygon = PackedVector2Array(34, -8, 34, 29, 66, 23, 61, -5)
 
 [node name="Jogadores" type="Node2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(473, 270)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, 1)
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../Jogadores")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-5, 317)
-shape = SubResource("RectangleShape2D_4u1nh")
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(570.5, 5)
-shape = SubResource("RectangleShape2D_k23t8")
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(1284.25, 560.25)
+scale = Vector2(0.206605, 0.362974)
+texture = ExtResource("4_ms2mb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1149.5, 325)
-shape = SubResource("RectangleShape2D_7qyk7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1356, 489)
+shape = SubResource("RectangleShape2D_8ss70")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(573, 647)
-shape = SubResource("RectangleShape2D_sjbs2")
+[node name="Jogador" parent="." instance=ExtResource("5_pepac")]
+position = Vector2(586, 549)
+
+[node name="folhas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="folhas"]
+position = Vector2(1401, 229)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_oxe0q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(1151, 92)
+scale = Vector2(1.54167, 1)
+polygon = PackedVector2Array(5.18921, 7, 7.78381, 74, 19.4595, 99, 40.8649, 110, 94.0541, 113, 112.216, 77, 132.973, 70, 136.865, 27, 116.757, -6, 79.1352, -34, 43.4595, -29)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(1298, 49)
+polygon = PackedVector2Array(-37, 5, 32, 39, 62, 65, 97, 61, 133, 45, 148, 18, 130, -12, 76, -27, 43, -31, 37, -37, -18, -40, -37, -28)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(8.70625, 120.244)
+scale = Vector2(1.77841, 1.48323)
+polygon = PackedVector2Array(0.165175, -33.2003, 0.165175, 59.1656, 23.7818, 57.8172, 45.7115, 39.6137, 53.5837, 9.27451, 37.8393, -16.3452, 20.9703, -29.1551)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(66, 40)
+polygon = PackedVector2Array(6, 27, 86, 34, 107, 15, 174, 14, 185, -15, 160, -30, 94, -30, 91, -22, 58, -22, 25, -18, 5, -4)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(305, 52)
+polygon = PackedVector2Array(-24, 43, 20, 61, 108, 64, 157, 38, 172, -8, 158, -52, -26, -39, -26, -9)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(609, 75)
+polygon = PackedVector2Array(36, 27, 50, 54, 118, 68, 141, 102, 217, 106, 224, 72, 214, 54, 180, 42, 197, 20, 181, -13, 210, -16, 230, 15, 309, 38, 344, 70, 386, 64, 398, 25, 377, 9, 386, -20, 349, -55, 290, -64, 217, -51, 193, -65, 150, -64, 126, -53, 129, -34, 70, -28, 56, -52, 33, -65, -32, -64, -64, -64, -83, -57, -83, -31, -65, -4, -30, -2, 22, 2, 32, -7)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(748, 156)
+polygon = PackedVector2Array(49, 100, 135, 100, 168, 76, 171, 42, 128, 22, 87, 19, 55, 27, 35, 40, 24, 55, 25, 76)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(397, 146)
+polygon = PackedVector2Array(52, 62, 102, 85, 168, 84, 220, 63, 234, 40, 235, -8, 181, -52, 122, -55, 60, -39, 23, 8)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(94, 156)
+polygon = PackedVector2Array(1, 1, 5, 48, -24, 68, -13, 99, 36, 103, 74, 90, 73, 72, 118, 71, 164, 29, 160, 0, 121, -23, 46, -31)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(148, 425)
+polygon = PackedVector2Array(-66, 81, 83, 93, 119, 85, 165, 63, 275, 63, 311, 23, 328, -32, 332, -7, 398, -9, 413, -30, 497, -36, 524, -60, 518, -93, 474, -116, 410, -111, 371.903, -89.2743, 365, -104, 335, -123, 262, -125, 218, -98, 217, -69, 164, -61, 124, -29, 106, -47, 28, -44, -10, -23, -51, 14, -87, 25, -98, 55)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(0, 299)
+polygon = PackedVector2Array(0, 0, 15, 75, 90, 72, 120, 21, 66, -3)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="folhas"]
+position = Vector2(-111, 16)
+polygon = PackedVector2Array(315, 267, 377, 297, 442, 289, 461, 262, 452, 226, 393, 204, 325, 226)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(399, 270, 479, 267, 491, 236, 459, 215, 411, 219, 385, 236)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(659, 213, 689, 198, 675, 168, 689, 152, 700, 133, 635, 105, 618, 111, 637, 127, 642, 151, 632, 187, 618, 206)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1256, 25, 1215, 28, 1181, 48, 1167, 42, 1167, 17, 1273, 0)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1457, 0, 1492, 51, 1533, 54, 1605, 46, 1605, 0)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1249, 440, 1261, 398, 1220, 347, 1134, 334, 1070, 358, 1046, 389, 1014, 376, 932, 382, 902, 412, 912, 449, 936, 454, 945, 485, 974, 504, 1007, 499, 1032, 502, 1143, 529, 1208, 528, 1220, 511, 1225, 485)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(945, 503, 985, 511, 1005, 542, 989, 557, 947, 560, 924, 566, 940, 598, 912, 642, 874, 659, 798, 658, 754, 639, 735, 615, 730, 581, 751, 549, 793, 525, 855, 518, 899, 541, 915, 512)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(162, 799, 202, 802, 234, 780, 258, 729, 224, 687, 168, 663, 90, 675, 64, 688, 0, 699, 18, 822, 48, 798, 145, 799)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(214, 900, 258, 872, 271, 840, 310, 814, 360, 830, 365, 862, 325, 877, 350, 900, 394, 881, 446, 868, 501, 878, 521, 900)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1475, 900, 1477, 860, 1515, 818, 1605, 814, 1605, 900)
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1571, 256, 1518, 249, 1510, 200, 1548, 175, 1605, 175, 1605, 255)
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(1202, 649, 1160, 635, 1149, 590, 1205, 554, 1278, 562, 1313, 587, 1302, 619, 1335, 649, 1325, 684, 1281, 685)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="folhas"]
+polygon = PackedVector2Array(550, 900, 645, 900, 652, 878, 706, 878, 714, 900, 1136, 900, 1110, 865, 1022, 845, 941, 880, 915, 900, 907, 838, 828, 810, 739, 832, 710, 799, 671, 776, 639, 705, 614, 681, 518, 676, 479, 716, 479, 738, 447, 757, 474, 789, 517, 784, 548, 772, 582, 786, 585, 811, 582, 854, 556, 876)
+one_way_collision_margin = 128.0
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_entered" from="folhas" to="." method="_on_folhas_body_shape_entered"]
+[connection signal="body_shape_exited" from="folhas" to="." method="_on_folhas_body_shape_exited"]

@@ -155,7 +155,7 @@ text = "Confirmar"
 layout_mode = 0
 offset_right = 84.0
 offset_bottom = 40.0
-text = "V1.1"
+text = "V2.0"
 
 [connection signal="pressed" from="Criar" to="." method="_on_criar_pressed"]
 [connection signal="pressed" from="Conectar" to="." method="_on_conectar_pressed"]

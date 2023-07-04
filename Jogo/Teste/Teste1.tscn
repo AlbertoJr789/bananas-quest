@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://m0bqtk5mymld"]
+
+[ext_resource type="PackedScene" uid="uid://ctoap6e1xmr6y" path="res://Jogo/Menu/MenuLAN.tscn" id="1_hkgc0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player_Spawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="LAN" parent="." instance=ExtResource("1_hkgc0")]
