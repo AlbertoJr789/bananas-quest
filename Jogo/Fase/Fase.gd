@@ -30,3 +30,17 @@ func get_random_position():
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	var jogador = body as Node2D
 	print("O objeto ", jogador.name, " entrou na área")
+
+
+func _on_folhas_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	var jogador = body as Node2D
+	jogador.get_child(2).hide()
+	print("O objeto ", jogador.name, " entrou na folha")
+	pass # Replace with function body.
+
+
+func _on_folhas_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	var jogador = body as Node2D
+	jogador.get_child(2).show()
+	print("O objeto ", jogador.name, " saiu da folha")
+	pass # Replace with function body.

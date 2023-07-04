@@ -1,5 +1,3 @@
-res://Jogo/Jogador/Jogador.tscn
-res://Jogo/Jogador/Jogador.gd
 res://Jogo/Fase/Fase.tscn
-res://Jogo/Menu/MenuLAN.tscn
 res://Jogo/Fase/Fase.gd
+res://Jogo/Jogador/Jogador.tscn

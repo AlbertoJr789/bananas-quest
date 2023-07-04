@@ -20,8 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://c2wsg312f5i4" path="res://assets/mamaco/monkey_walk_away_2.png" id="18_sjfec"]
 [ext_resource type="Texture2D" uid="uid://dwuhnlmt85piv" path="res://assets/mamaco/monkey_walk_away_3.png" id="19_cocol"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_led61"]
-size = Vector2(30, 45)
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ci6v0"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t0qen"]
 animations = [{
@@ -105,34 +107,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ci6v0"]
-properties/0/path = NodePath("AnimatedSprite2D:flip_h")
-properties/0/spawn = true
-properties/0/sync = true
-properties/1/path = NodePath(".:position")
-properties/1/spawn = true
-properties/1/sync = true
-properties/2/path = NodePath("AnimatedSprite2D:frame")
-properties/2/spawn = true
-properties/2/sync = true
-properties/3/path = NodePath("AnimatedSprite2D:animation")
-properties/3/spawn = true
-properties/3/sync = true
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rppf3"]
+height = 52.0
 
 [node name="Jogador" type="CharacterBody2D"]
 script = ExtResource("1_whtl7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -0.5)
-shape = SubResource("RectangleShape2D_led61")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(5.11591e-13, -2.27374e-13)
-enabled = false
-limit_left = 0
-limit_top = 0
-limit_right = 1600
-limit_bottom = 900
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ci6v0")
 
 [node name="NicknameLabel" type="Label" parent="."]
 offset_left = -131.0
@@ -150,5 +132,14 @@ scale = Vector2(0.321429, 0.321429)
 sprite_frames = SubResource("SpriteFrames_t0qen")
 animation = &"descer"
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_ci6v0")
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(-2.96698e-06, -5.93397e-06)
+scale = Vector2(3.11111, 3.11111)
+enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 900
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rppf3")
