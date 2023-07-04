@@ -1,10 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://gp28ldbjk2ek"]
+[gd_scene load_steps=39 format=3 uid="uid://gp28ldbjk2ek"]
 
 [ext_resource type="Script" path="res://Jogo/Fase/Fase.gd" id="1_ed3oj"]
 [ext_resource type="Texture2D" uid="uid://coy0jj0ohotry" path="res://assets/Mapa amogus.png" id="2_un808"]
 [ext_resource type="Texture2D" uid="uid://b2qsyjam41sgb" path="res://assets/mapa flroresta.png" id="3_pjksj"]
 [ext_resource type="Texture2D" uid="uid://n5ahnjp6ait4" path="res://icon.svg" id="4_ms2mb"]
-[ext_resource type="PackedScene" uid="uid://dquyh8lebuwu" path="res://Jogo/Jogador/Jogador.tscn" id="5_pepac"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mvj8a"]
 
@@ -297,9 +296,6 @@ texture = ExtResource("4_ms2mb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1356, 489)
 shape = SubResource("RectangleShape2D_8ss70")
-
-[node name="Jogador" parent="." instance=ExtResource("5_pepac")]
-position = Vector2(586, 549)
 
 [node name="folhas" type="Area2D" parent="."]
 
